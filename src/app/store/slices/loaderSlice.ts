@@ -11,7 +11,7 @@ const loaderSlice = createSlice({
   name: "loader",
   initialState,
   reducers: {
-    isLoader: (state, action) => {
+    setIsLoading: (state, action) => {
       state.loader = action.payload;
     },
   },

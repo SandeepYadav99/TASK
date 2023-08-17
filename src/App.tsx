@@ -1,14 +1,10 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-
-import Login from "./app/pages/Auth/Login";
 import { Home } from "./app/pages/Home/Home";
 import RouteLayout from "./app/pages/Route/RouteLayout";
 import ErrorPage from "./app/pages/ErrorPage/ErrorPage";
+import UserDetails from "./app/pages/UserDetail/UserDetails";
 
 const App = () => {
-  // const auth = useAppSelector((state) => state.loaderReducer)
-  // const { isLoader } = useActions();
-
 
   const router = createBrowserRouter([
     {
@@ -17,7 +13,7 @@ const App = () => {
       errorElement:<ErrorPage/>,
       children: [
         { path: '/', element: <Home /> },
-        { path: '/auth', element: <Login /> }
+        { path: '/:userId', element: <UserDetails /> }
       ]
     },
 
